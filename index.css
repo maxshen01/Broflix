@@ -11,6 +11,7 @@ nav div {
 main {
     background-color: gray;
     border: 2px solid black;
+    text-align: center;
     margin: 0 6%;
     border-radius: 3%;
 }
@@ -43,4 +44,21 @@ main header {
 
 .a:hover {
     background-color: lightgray;
+}
+
+.actorImage {
+    text-align: center;
+}
+
+.actorImage img {
+    border: 2px solid black
+}
+
+main p {
+    text-align: left;
+    padding: 0 3%;
+}
+
+main section {
+    padding-bottom: 20px;
 }
