@@ -10,9 +10,9 @@ nav div {
 
 main {
     background-color: gray;
+    border: 2px solid black;
     margin: 0 6%;
     border-radius: 3%;
-    padding: 2%;
 }
 
 .actorName {
@@ -22,13 +22,25 @@ main {
 main header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 60px; /* controls space between items */
-    margin-bottom: 20px;
+    justify-content: space-evenly;
     font-size: 22px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
+    margin-bottom: 2%;
 }
 
 .a {
-    border-right: 2px solid white;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.a:not(:last-child) {
+    border-right: 2px solid black;
+}
+
+.a:hover {
+    background-color: lightgray;
 }
