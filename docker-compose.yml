@@ -1,0 +1,22 @@
+version: '3.9'
+services: 
+  movies-mvc:
+    image: maxshen01/movies-mvc:0.0.1.RELEASE
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - movies-db
+    networks:
+      - movies-network
+  
+  movies-db:
+    image: maxshen01/movies-db:0.0.1.RELEASE
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - movies-network
+
+networks:
+  movies-network:
