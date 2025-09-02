@@ -9,6 +9,18 @@ const index = async (req, res) => {
     }
 }
 
+const show = async (req, res) => {
+    try {
+        const id = req.params.id
+
+        const movies = await Movies.getOneById(id)
+        res.status(200).json(movies)
+    } catch (err) {
+        res.status(404).json({error: err.message})
+    }
+}
+
 module.exports = {
-    index
+    index,
+    show
 }

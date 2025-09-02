@@ -22,6 +22,21 @@ class Movies {
             throw new Error('Unable to get the movies')
         }
     }
+
+    static async getOneById(id) {
+        try {
+            const response = await db.query('SELECT * FROM movies WHERE movie_id = $1;', [id])
+
+            if (response.rows.length === 1) {
+                return response.rows.map(movie => new Movies(movie))
+            } else {
+                throw new Error('There are no movies in the table')
+            }
+
+        } catch (err) {
+            throw new Error('Unable to get the movies')
+        }
+    }
 }
 
 module.exports = Movies
