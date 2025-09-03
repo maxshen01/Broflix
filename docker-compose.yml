@@ -1,7 +1,7 @@
 version: '3.9'
 services: 
   movies-mvc:
-    image: maxshen01/movies-mvc:0.0.1.RELEASE
+    image: maxshen01/movies-mvc:latest
     ports:
       - "3000:3000"
     restart: always
@@ -11,7 +11,7 @@ services:
       - movies-network
   
   movies-db:
-    image: maxshen01/movies-db:0.0.1.RELEASE
+    image: maxshen01/movies-db:latest
     ports:
       - "5432:5432"
     restart: always

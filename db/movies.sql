@@ -17,5 +17,5 @@ INSERT INTO movies (name, category, length) VALUES
     ('The Shawshank Redemption', 'Drama', 142),
     ('Avengers: Endgame', 'Superhero', 181),
     ('Jurassic Park', 'Adventure', 127),
-    ('Interstellar', 'Sci-Fi', 169)
+    ('Interstellar', 'Sci-Fi', 169),
     ('Superman', 'Superhero', 150);
