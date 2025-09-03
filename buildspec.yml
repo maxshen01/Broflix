@@ -6,7 +6,7 @@ env:
     SECRET_PASSWORD: "pipeline-docker-credentials:password"
 
 phases:
-  pre-build:
+  pre_build:
     commands:
       - echo "Login to docker hub"
       - echo "$SECRET_PASSWORD" | docker login -u "$SECRET_USERNAME" --password-stdin
@@ -17,7 +17,7 @@ phases:
       - docker build -t maxshen01/movies-db:latest ./db
       - docker build -t maxshen01/movies-mvc:latest ./server
   
-  post-build:
+  post_build:
     commands:
       - echo "Pushing docker images"
       - docker push maxshen01/movies-db:latest
